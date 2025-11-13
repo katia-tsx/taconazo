@@ -1,0 +1,2 @@
+export { CustomerDisplay } from './CustomerDisplay';
+
