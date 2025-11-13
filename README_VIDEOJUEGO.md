@@ -831,22 +831,22 @@ El juego utiliza un estilo pixel art retro con:
   - Usado como overlay
   - Efecto de "especial" o "perfecto"
 
-#### 49. **humo.png** - Humo de Cocina
-- **Tamaño**: 64x64 píxeles (o múltiples tamaños)
-- **Posición**: Sobre la estufa o área de cocción
-- **Fondo**: Transparente
-- **Estilo**: Nube de humo
-- **Colores**:
-  - Centro: Gris oscuro (#424242)
-  - Medio: Gris (#757575)
-  - Exterior: Gris claro (#BDC3C7) con opacidad
-- **Detalles**:
-  - Forma de nube irregular
-  - Múltiples formas para variedad
-  - Opacidad degradada
-  - Textura suave
-  - Usado para animación de humo
-  - Se eleva hacia arriba
+    #### 49. **humo.png** - Humo de Cocina
+    - **Tamaño**: 64x64 píxeles (o múltiples tamaños)
+    - **Posición**: Sobre la estufa o área de cocción
+    - **Fondo**: Transparente
+    - **Estilo**: Nube de humo
+    - **Colores**:
+    - Centro: Gris oscuro (#424242)
+    - Medio: Gris (#757575)
+    - Exterior: Gris claro (#BDC3C7) con opacidad
+    - **Detalles**:
+    - Forma de nube irregular
+    - Múltiples formas para variedad
+    - Opacidad degradada
+    - Textura suave
+    - Usado para animación de humo
+    - Se eleva hacia arriba
 
 #### 50. **explosion.png** - Explosión de Éxito
 - **Tamaño**: 128x128 píxeles
@@ -997,22 +997,22 @@ El juego utiliza un estilo pixel art retro con:
   - Borde destacado
   - Sombra sutil
 
-#### 58. **receta-asada.png** - Receta de Taco de Asada
-- **Tamaño**: 200x150 píxeles
-- **Posición**: Panel lateral o superior
-- **Fondo**: Blanco (#FFFFFF) con borde
-- **Estilo**: Igual que receta-pastor.png
-- **Colores**: Similar pero puede variar el color del borde
-- **Detalles**:
-  - Misma estructura
-  - Título "TACO DE ASADA"
-  - Ingredientes:
-    1. Tortilla
-    2. Carne asada
-    3. Cebolla
-    4. Cilantro
-    5. Salsa verde
-  - Iconos de cada ingrediente
+    #### 58. **receta-asada.png** - Receta de Taco de Asada
+    - **Tamaño**: 200x150 píxeles
+    - **Posición**: Panel lateral o superior
+    - **Fondo**: Blanco (#FFFFFF) con borde
+    - **Estilo**: Igual que receta-pastor.png
+    - **Colores**: Similar pero puede variar el color del borde
+    - **Detalles**:
+    - Misma estructura
+    - Título "TACO DE ASADA"
+    - Ingredientes:
+        1. Tortilla
+        2. Carne asada
+        3. Cebolla
+        4. Cilantro
+        5. Salsa verde
+    - Iconos de cada ingrediente
 
 #### 59. **receta-carnitas.png** - Receta de Taco de Carnitas
 - **Tamaño**: 200x150 píxeles
