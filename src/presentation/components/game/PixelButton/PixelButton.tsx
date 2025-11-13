@@ -66,17 +66,19 @@ export const PixelButton: React.FC<PixelButtonProps> = ({
     <button
       onClick={onClick}
       disabled={disabled}
-      className={`relative group flex-1 transform transition-all duration-300 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none ${className}`}
+      className={`relative group transform transition-all duration-300 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none ${className}`}
     >
       <Image
         src={imagePath}
         alt={fallbackText}
-        width={256}
-        height={64}
-        className="w-full h-auto pixelated"
+        width={150}
+        height={45}
+        className="h-auto pixelated"
         style={{
           imageRendering: 'pixelated',
           filter: disabled ? 'grayscale(100%) opacity(0.5)' : 'none',
+          width: 'auto',
+          height: 'clamp(36px, 5vh, 48px)',
         }}
         onError={() => setImageError(true)}
       />

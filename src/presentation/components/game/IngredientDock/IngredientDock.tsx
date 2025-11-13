@@ -7,11 +7,13 @@ import { Ingredient } from '@/domain/entities/Ingredient';
 interface IngredientDockProps {
   ingredients: Ingredient[];
   onDragStart: (ingredient: Ingredient) => void;
+  activeIngredient?: Ingredient | null;
 }
 
 export const IngredientDock: React.FC<IngredientDockProps> = ({
   ingredients,
   onDragStart,
+  activeIngredient,
 }) => {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -45,11 +47,11 @@ export const IngredientDock: React.FC<IngredientDockProps> = ({
 
   return (
     <div 
-      className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-t from-black/95 via-black/85 to-black/70 pb-2 sm:pb-2.5 pt-3 sm:pt-4 border-t-4 border-[#E91E63]/50 flex items-center"
+      className="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-t from-black/95 via-black/85 to-black/70 pb-3 sm:pb-4 md:pb-5 pt-4 sm:pt-5 md:pt-6 border-t-4 border-yellow-500/50 flex items-center"
       style={{
-        height: '120px',
-        maxHeight: '120px',
-        minHeight: '120px',
+        height: 'clamp(140px, 18vh, 200px)',
+        maxHeight: 'clamp(140px, 18vh, 200px)',
+        minHeight: 'clamp(140px, 18vh, 200px)',
       }}
     >
       {/* Flecha izquierda */}
@@ -94,14 +96,34 @@ export const IngredientDock: React.FC<IngredientDockProps> = ({
               e.dataTransfer.setData('ingredient', JSON.stringify(ingredient));
               onDragStart(ingredient);
             }}
-            className="flex-shrink-0 group cursor-grab active:cursor-grabbing transform transition-all duration-200 hover:scale-110 active:scale-95"
+            onTouchStart={(e) => {
+              // Soporte para touch en móviles - marcar ingrediente como seleccionado
+              e.preventDefault();
+              onDragStart(ingredient);
+            }}
+            onClick={(e) => {
+              // Click directo también funciona para móviles
+              e.preventDefault();
+              e.stopPropagation();
+              onDragStart(ingredient);
+            }}
+            className="flex-shrink-0 group cursor-pointer transform transition-all duration-200 hover:scale-110 active:scale-95"
           >
-            <div className="bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 border-3 border-white/60 shadow-xl hover:shadow-2xl hover:border-[#E91E63] transition-all relative"
+            <div className={`bg-white/95 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 border-3 shadow-xl transition-all relative ${
+              activeIngredient?.id === ingredient.id
+                ? 'border-yellow-500 shadow-2xl scale-110 ring-4 ring-yellow-400/50'
+                : 'border-white/60 hover:border-[#E91E63] hover:shadow-2xl'
+            }`}
               style={{
-                boxShadow: '0 4px 12px rgba(0,0,0,0.3), 0 2px 4px rgba(233,30,99,0.2)'
+                boxShadow: activeIngredient?.id === ingredient.id
+                  ? '0 8px 24px rgba(255, 215, 0, 0.6), 0 4px 12px rgba(0,0,0,0.4)'
+                  : '0 4px 12px rgba(0,0,0,0.3), 0 2px 4px rgba(233,30,99,0.2)'
               }}
             >
-              <div className="w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 relative">
+              <div className="relative" style={{
+                width: 'clamp(64px, 10vw, 120px)',
+                height: 'clamp(64px, 10vw, 120px)',
+              }}>
                 <Image
                   src={ingredient.imagePath}
                   alt={ingredient.name}
