@@ -1,0 +1,77 @@
+{
+  "common": {
+    "logo": "TACO NAZO",
+    "orderNow": "Ordena Ya",
+    "seeMore": "Ver Más",
+    "exploreNow": "Explora Ahora",
+    "contactUs": "Contáctanos"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Acerca",
+    "pages": "Páginas",
+    "menu": "Menú",
+    "blog": "Blog",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Comida Super Deliciosa para Ti",
+    "subtitle": "Ordena tu comida favorita desde cualquier lugar hasta la puerta de tu casa"
+  },
+  "search": {
+    "food": "Comida",
+    "product": "Producto",
+    "price": "Precio",
+    "select": "Seleccionar",
+    "priceRange": "Rango de Precio"
+  },
+  "promotions": {
+    "promotion1": {
+      "title": "Crujiente, Cada Bocado Sabe",
+      "subtitle": "Taco & Papas Fritas",
+      "discount": "OBTÉN 50% EXTRA",
+      "buttonText": "Explora Ahora"
+    },
+    "promotion2": {
+      "title": "Delicioso de Hoy",
+      "subtitle": "Tacos Auténticos",
+      "description": "Solo Este Fin de Semana",
+      "buttonText": "Ordena Ahora"
+    },
+    "promotion3": {
+      "title": "Sabor Fresco y Auténtico",
+      "subtitle": "Tacos Deliciosos y Calientes",
+      "discount": "OBTÉN 50% EXTRA",
+      "buttonText": "Explora Ahora"
+    }
+  },
+  "services": {
+    "title": "Te ofrecemos una gran Variedad de Servicios",
+    "highlight": "Variedad de Servicios",
+    "description": "Servimos comidas, bebidas, bocadillos ligeros, productos horneados o sándwiches.",
+    "satisfiedCustomers": "Clientes Satisfechos",
+    "foodCategories": "Categoría de Comida",
+    "awards": "Premios"
+  },
+  "menu": {
+    "title": "Menú",
+    "items": {
+      "tacoAlPastor": "Taco al Pastor",
+      "tacoDeCarnitas": "Taco de Carnitas",
+      "tacoDeAsada": "Taco de Asada",
+      "tacoDeBarbacoa": "Taco de Barbacoa",
+      "tacoDePescado": "Taco de Pescado",
+      "tacoDeChorizo": "Taco de Chorizo"
+    }
+  },
+  "footer": {
+    "title": "Solicita El Tuyo Ya",
+    "subtitle": "Opciones Infinitas, encontramos las mejores Ofertas.",
+    "contactButton": "Contáctanos",
+    "terms": "Términos",
+    "about": "Acerca",
+    "policy": "Política",
+    "copyright": "Copyright 2025 al right reserver by taconazo"
+  }
+}
+
