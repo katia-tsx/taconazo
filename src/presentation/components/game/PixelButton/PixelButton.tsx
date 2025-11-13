@@ -71,14 +71,14 @@ export const PixelButton: React.FC<PixelButtonProps> = ({
       <Image
         src={imagePath}
         alt={fallbackText}
-        width={150}
-        height={45}
+        width={400}
+        height={120}
         className="h-auto pixelated"
         style={{
           imageRendering: 'pixelated',
           filter: disabled ? 'grayscale(100%) opacity(0.5)' : 'none',
           width: 'auto',
-          height: 'clamp(36px, 5vh, 48px)',
+          height: 'clamp(100px, 12vh, 140px)',
         }}
         onError={() => setImageError(true)}
       />

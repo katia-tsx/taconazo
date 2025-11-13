@@ -378,7 +378,7 @@ export const GameBoard: React.FC<GameBoardProps> = ({
                     />
                   </div>
                   
-                  {/* Taco completo cuando se presiona servir - sin rebote, más grande */}
+                  {/* Taco completo cuando se presiona servir - animación bacana */}
                   {showCompleteTaco && (
                     <div className="absolute bottom-20 sm:bottom-22 md:bottom-24 left-1/2 transform -translate-x-1/2 z-30 pointer-events-none" style={{ width: '100%', display: 'flex', justifyContent: 'center' }}>
                       <Image
@@ -386,10 +386,9 @@ export const GameBoard: React.FC<GameBoardProps> = ({
                         alt="Taco completo"
                         width={280}
                         height={280}
-                        className="pixelated drop-shadow-2xl"
+                        className="pixelated animate-taco-complete animate-taco-glow"
                         style={{ 
                           imageRendering: 'pixelated',
-                          filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.8))',
                         }}
                       />
                     </div>
