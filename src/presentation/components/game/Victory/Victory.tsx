@@ -17,9 +17,9 @@ export const Victory: React.FC<VictoryProps> = ({
 }) => {
   return (
     <div 
-      className="h-screen w-screen flex items-center justify-center p-4 md:p-8 relative overflow-hidden"
+      className="h-screen w-screen flex items-center justify-center p-4 sm:p-6 md:p-8 relative overflow-hidden"
       style={{
-        backgroundImage: "url('/game/scenarios/fondo-cocina.png')",
+        backgroundImage: "url('/game/scenarios/game-win.jpg')",
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         height: '100vh',
@@ -28,145 +28,143 @@ export const Victory: React.FC<VictoryProps> = ({
         maxWidth: '100vw',
       }}
     >
-      {/* Overlay simple */}
-      <div className="absolute inset-0 bg-black/60" />
-      
-      <div className="relative z-10 w-full max-w-3xl mx-auto">
-        <div className="bg-black/90 backdrop-blur-sm rounded-2xl p-6 sm:p-8 md:p-10 border-4 border-white/30 relative">
-          {/* Imagen Victoria */}
-          <div className="mb-6 sm:mb-8 flex justify-center">
+      {/* Panel transparente con backdrop-filter */}
+      <div className="relative z-10 w-full max-w-3xl mx-auto px-4 flex items-center justify-center">
+        <div 
+          className="bg-black/30 backdrop-blur-md rounded-3xl p-2 sm:p-3 border-2 border-white/20 relative flex flex-col items-center w-full"
+          style={{
+            boxShadow: '0 8px 32px rgba(0, 0, 0, 0.5)',
+            maxHeight: '85vh',
+            overflow: 'hidden',
+          }}
+        >
+          {/* Título Victoria */}
+          <div className="mb-2 sm:mb-3 flex justify-center w-full">
             <Image
-              src="/game/ui/victoria.png"
+              src="/game/ui/titulo-victoria.png"
               alt="Victoria"
-              width={400}
-              height={300}
-              className="mx-auto pixelated drop-shadow-2xl w-full max-w-[300px] sm:max-w-[400px]"
+              width={600}
+              height={150}
+              className="mx-auto pixelated drop-shadow-2xl w-full max-w-[300px] sm:max-w-[400px] md:max-w-[500px]"
               style={{ imageRendering: 'pixelated' }}
             />
           </div>
 
-          {/* Estadísticas simples */}
-          <div className="space-y-4 sm:space-y-6 mb-8 sm:mb-10">
-            {/* Puntuación */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 sm:p-6 border-2 border-white/20">
-              <p 
-                className="text-sm sm:text-base text-white/80 font-bold mb-2 uppercase text-center pixel-font"
-                style={{ fontFamily: 'monospace', letterSpacing: '0.1em' }}
-              >
-                Puntuación Final
-              </p>
-              <p 
-                className="text-4xl sm:text-5xl md:text-6xl font-black text-white leading-none text-center pixel-font pixel-text-shadow-xl"
-                style={{ 
-                  fontFamily: 'monospace',
-                  textShadow: '4px 4px 0px rgba(0,0,0,0.8)',
-                }}
-              >
-                {stats.score}
-              </p>
-            </div>
-
-            {/* Grid de estadísticas */}
-            <div className="grid grid-cols-2 gap-3 sm:gap-4">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-white/20">
+          {/* Estadísticas: Monedas, Órdenes, Puntuación - Sin cards, centrado y grande */}
+          <div className="mb-3 sm:mb-4 w-full flex flex-col items-center gap-2 sm:gap-3">
+            {/* Monedas */}
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
+              <Image
+                src="/game/ui/icono-monedas.png"
+                alt="Monedas"
+                width={64}
+                height={64}
+                className="pixelated flex-shrink-0"
+                style={{ imageRendering: 'pixelated' }}
+              />
+              <div className="flex flex-col items-center">
                 <p 
-                  className="text-xs sm:text-sm text-white/80 font-bold mb-1 uppercase text-center pixel-font"
-                  style={{ fontFamily: 'monospace', letterSpacing: '0.1em' }}
-                >
-                  Órdenes
-                </p>
-                <p 
-                  className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-none text-center pixel-font pixel-text-shadow"
-                  style={{ 
-                    fontFamily: 'monospace',
-                    textShadow: '2px 2px 0px rgba(0,0,0,0.8)',
-                  }}
-                >
-                  {stats.ordersCompleted}
-                </p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-white/20">
-                <p 
-                  className="text-xs sm:text-sm text-white/80 font-bold mb-1 uppercase text-center pixel-font"
-                  style={{ fontFamily: 'monospace', letterSpacing: '0.1em' }}
-                >
-                  Perfectos
-                </p>
-                <p 
-                  className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-none text-center pixel-font pixel-text-shadow"
-                  style={{ 
-                    fontFamily: 'monospace',
-                    textShadow: '2px 2px 0px rgba(0,0,0,0.8)',
-                  }}
-                >
-                  {stats.perfectTacos}
-                </p>
-              </div>
-
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-white/20">
-                <p 
-                  className="text-xs sm:text-sm text-white/80 font-bold mb-1 uppercase text-center pixel-font"
+                  className="text-xs sm:text-sm text-white/90 font-bold uppercase pixel-font mb-0.5"
                   style={{ fontFamily: 'monospace', letterSpacing: '0.1em' }}
                 >
                   Monedas
                 </p>
                 <p 
-                  className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-none text-center pixel-font pixel-text-shadow"
+                  className="text-3xl sm:text-4xl md:text-5xl font-black text-white pixel-font pixel-text-shadow leading-none"
                   style={{ 
                     fontFamily: 'monospace',
-                    textShadow: '2px 2px 0px rgba(0,0,0,0.8)',
+                    textShadow: '3px 3px 0px rgba(0,0,0,0.9), 6px 6px 0px rgba(0,0,0,0.7)',
                   }}
                 >
                   {stats.coins}
                 </p>
               </div>
+            </div>
 
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 sm:p-4 border-2 border-white/20">
+            {/* Órdenes */}
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
+              <Image
+                src="/game/ui/icono-ordenes.png"
+                alt="Órdenes"
+                width={64}
+                height={64}
+                className="pixelated flex-shrink-0"
+                style={{ imageRendering: 'pixelated' }}
+              />
+              <div className="flex flex-col items-center">
                 <p 
-                  className="text-xs sm:text-sm text-white/80 font-bold mb-1 uppercase text-center pixel-font"
+                  className="text-xs sm:text-sm text-white/90 font-bold uppercase pixel-font mb-0.5"
                   style={{ fontFamily: 'monospace', letterSpacing: '0.1em' }}
                 >
-                  Nivel
+                  Órdenes
                 </p>
                 <p 
-                  className="text-2xl sm:text-3xl md:text-4xl font-black text-white leading-none text-center pixel-font pixel-text-shadow"
+                  className="text-3xl sm:text-4xl md:text-5xl font-black text-white pixel-font pixel-text-shadow leading-none"
                   style={{ 
                     fontFamily: 'monospace',
-                    textShadow: '2px 2px 0px rgba(0,0,0,0.8)',
+                    textShadow: '3px 3px 0px rgba(0,0,0,0.9), 6px 6px 0px rgba(0,0,0,0.7)',
                   }}
                 >
-                  {stats.currentLevel || 1}
+                  {stats.ordersCompleted}
+                </p>
+              </div>
+            </div>
+
+            {/* Puntuación */}
+            <div className="flex items-center justify-center gap-2 sm:gap-3">
+              <Image
+                src="/game/ui/icono-puntuacion.png"
+                alt="Puntuación"
+                width={64}
+                height={64}
+                className="pixelated flex-shrink-0"
+                style={{ imageRendering: 'pixelated' }}
+              />
+              <div className="flex flex-col items-center">
+                <p 
+                  className="text-xs sm:text-sm text-white/90 font-bold uppercase pixel-font mb-0.5"
+                  style={{ fontFamily: 'monospace', letterSpacing: '0.1em' }}
+                >
+                  Puntuación
+                </p>
+                <p 
+                  className="text-3xl sm:text-4xl md:text-5xl font-black text-white pixel-font pixel-text-shadow leading-none"
+                  style={{ 
+                    fontFamily: 'monospace',
+                    textShadow: '3px 3px 0px rgba(0,0,0,0.9), 6px 6px 0px rgba(0,0,0,0.7)',
+                  }}
+                >
+                  {stats.score}
                 </p>
               </div>
             </div>
           </div>
 
           {/* Botones con imágenes pixel art */}
-          <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 justify-center items-center w-full">
             <button
               onClick={onNextLevel}
-              className="relative group transform transition-all duration-300 hover:scale-105 active:scale-95"
+              className="relative group transform transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
             >
               <Image
                 src="/game/ui/boton-jugar.png"
                 alt="Siguiente Nivel"
                 width={200}
                 height={60}
-                className="pixelated drop-shadow-xl"
+                className="pixelated drop-shadow-xl mx-auto sm:mx-0"
                 style={{ imageRendering: 'pixelated' }}
               />
             </button>
             <button
               onClick={onMenu}
-              className="relative group transform transition-all duration-300 hover:scale-105 active:scale-95"
+              className="relative group transform transition-all duration-300 hover:scale-105 active:scale-95 w-full sm:w-auto"
             >
               <Image
                 src="/game/ui/boton-menu.png"
                 alt="Menú Principal"
                 width={200}
                 height={60}
-                className="pixelated drop-shadow-xl"
+                className="pixelated drop-shadow-xl mx-auto sm:mx-0"
                 style={{ imageRendering: 'pixelated' }}
               />
             </button>

@@ -74,8 +74,8 @@ export const LevelSelect: React.FC<LevelSelectProps> = ({ onSelectLevel, onBack 
         backgroundRepeat: 'no-repeat',
       }}
     >
-      {/* Overlay sutil para mejor contraste */}
-      <div className="absolute inset-0 bg-black/10" />
+      {/* Overlay con filtro de color */}
+      <div className="absolute inset-0 bg-black/30" style={{ backdropFilter: 'brightness(0.7) contrast(1.1) saturate(1.2)' }} />
       
       <div className="w-full max-w-[100vw] mx-auto relative z-10 h-full flex flex-col items-center justify-between py-4 sm:py-6 md:py-8 lg:py-10 xl:py-12 px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24">
         {/* Título con estilo pixel art - igual que el menú principal */}

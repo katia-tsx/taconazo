@@ -901,22 +901,114 @@ El juego utiliza un estilo pixel art retro con:
   - Sombra para profundidad
   - Estilo impactante
 
-#### 53. **fondo-menu.png** - Fondo del Menú Principal
-- **Tamaño**: 800x600 píxeles
-- **Posición**: Fondo completo
-- **Fondo**: Sólido o con patrón
-- **Estilo**: Fondo decorativo del menú
-- **Colores**:
-  - Base: Rosa claro (#FCE4EC) o beige (#FFF8E1)
-  - Patrón: Rosa (#E91E63) o decoraciones mexicanas
-  - Elementos decorativos: Varios colores
-- **Detalles**:
-  - Fondo completo de la pantalla
-  - Puede tener decoraciones mexicanas (sombreros, banderas, tacos)
-  - Patrón sutil
-  - Estilo pixel art
-  - Sin elementos que distraigan mucho
-  - Centrado para UI
+#### 53. **fondo-menu.png** - Fondo del Menú Principal (Restaurante)
+- **Tamaño**: 1920x1080 píxeles (Full HD) o 1280x720 píxeles (HD)
+  - **Recomendado**: 1920x1080 para mejor calidad en todas las pantallas
+  - **Aspecto**: 16:9 (landscape/horizontal)
+  - **Resolución mínima**: 1280x720 píxeles
+  - **Resolución máxima**: 3840x2160 píxeles (4K) - opcional para futuro
+- **Posición**: Fondo completo de la pantalla, cubre todo el viewport
+- **Fondo**: Restaurante mexicano completo, interior acogedor
+- **Estilo**: Pixel Art, ambiente cálido, acogedor y festivo
+- **Colores principales**:
+  - **Base principal**: 
+    - Paredes: Beige cálido (#FFF8E1), Amarillo claro (#FFF9C4), o Rosa claro (#FCE4EC)
+    - Suelo: Madera clara (#D7CCC8), Ladrillo terracota (#E57373), o Azulejos mexicanos (colores vibrantes)
+  - **Gradiente base**: 
+    - De beige claro (#FFF8E1) a beige medio (#FFE082) en las paredes
+    - O de rosa claro (#FCE4EC) a rosa medio (#F8BBD0)
+  - **Acentos vibrantes**: 
+    - Rosa mexicano (#E91E63), Amarillo dorado (#FFD700), Verde (#4CAF50)
+    - Naranja (#FF9800), Rojo (#E74C3C), Azul turquesa (#00BCD4)
+  - **Elementos decorativos**: Colores vibrantes y alegres, estilo mexicano auténtico
+  - **Sombras**: Muy sutiles, grises cálidos (#E0E0E0) con opacidad baja (10-20%)
+- **Atmósfera y elementos visuales**:
+  - **Iluminación**: Luz cálida y acogedora, ambiente festivo y alegre
+  - **Elementos del restaurante** (deben incluirse):
+    - **Mesas y sillas**: Mesas de madera con manteles coloridos (rosa, amarillo, verde), sillas de madera o plástico coloridas
+    - **Paredes**: Decoradas con elementos mexicanos:
+      - Sombreros mexicanos colgados en las paredes
+      - Bandera mexicana o banderines de papel picado
+      - Fotos o cuadros de tacos, comida mexicana
+      - Plantas en macetas (cactus, plantas verdes)
+    - **Barra/Mostrador**: Barra de servicio con estantes, botellas, ingredientes visibles
+    - **Ventanas**: Ventanas con cortinas coloridas o persianas, luz natural entrando
+    - **Lámparas**: Lámparas colgantes con diseños mexicanos (piñatas, papel picado)
+    - **Decoraciones**: 
+      - Guirnaldas de papel picado (colores vibrantes: rosa, amarillo, verde, azul)
+      - Piñatas pequeñas colgando
+      - Estatuillas o figuras de tacos, chiles, etc.
+    - **Suelo**: Azulejos mexicanos con patrones coloridos, o madera clara
+    - **Área de cocina visible**: Al fondo o a un lado, mostrando la cocina activa (opcional pero recomendado)
+  - **Textura**: Puede tener textura sutil de madera, azulejos, o paredes pintadas
+  - **Patrón**: Patrones mexicanos sutiles en manteles, azulejos, o decoraciones
+- **Detalles técnicos**:
+  - **Formato**: PNG con fondo sólido (no transparente para fondo completo)
+  - **Estilo pixel art**: Sin anti-aliasing, colores sólidos, bordes definidos
+  - **Profundidad**: Usar luces y sombras sutiles para crear profundidad
+  - **Contraste**: Debe tener suficiente contraste para que el logo, título y botones se vean bien encima
+  - **Repetición**: No debe ser tileable, es un fondo único completo
+  - **Centrado**: El área central (30-70% de altura) debe estar más limpia para el logo, título y botones
+- **Composición**:
+  - **Zona superior (0-30%)**: 
+    - Paredes decoradas con sombreros, banderas, guirnaldas
+    - Lámparas colgantes
+    - Ventanas con luz natural
+  - **Zona central (30-70%)**: 
+    - Área principal más limpia para el logo, título y botones del menú
+    - Puede tener mesas y sillas en los laterales, pero el centro debe estar despejado
+    - Barra/mostrador visible pero no intrusivo
+  - **Zona inferior (70-100%)**: 
+    - Suelo con azulejos o madera
+    - Mesas y sillas más cercanas
+    - Decoraciones en el suelo (plantas, objetos decorativos)
+- **Paleta de colores completa**:
+  ```
+  Paredes:
+  Beige claro: #FFF8E1
+  Beige medio: #FFE082
+  Rosa claro: #FCE4EC
+  Rosa medio: #F8BBD0
+  
+  Acentos vibrantes:
+  Rosa mexicano: #E91E63
+  Amarillo dorado: #FFD700
+  Verde: #4CAF50
+  Naranja: #FF9800
+  Rojo: #E74C3C
+  Azul turquesa: #00BCD4
+  
+  Suelo:
+  Madera clara: #D7CCC8
+  Terracota: #E57373
+  Azulejo azul: #2196F3
+  Azulejo verde: #4CAF50
+  
+  Decoraciones:
+  Papel picado: Rosa (#E91E63), Amarillo (#FFEB3B), Verde (#4CAF50), Azul (#2196F3)
+  Manteles: Varios colores vibrantes
+  ```
+- **Efectos visuales**:
+  - **Overlay en código**: Se aplicará un overlay negro muy sutil con 10% de opacidad encima para mejor contraste del UI
+  - **Sin animaciones**: El fondo es estático, las animaciones se hacen en código
+  - **Brillo general**: Ambiente cálido, acogedor, festivo y alegre
+- **Uso en el juego**:
+  - Se usa como `background-image` en el componente `GameMenu`
+  - Se cubre con un overlay muy sutil (`bg-black/10`) para mejor contraste del logo y botones
+  - El logo, título y botones se muestran encima, centrados
+  - El fondo debe sugerir "restaurante mexicano acogedor" y "bienvenida" al jugador
+- **Referencias visuales**:
+  - Restaurante mexicano auténtico y colorido
+  - Ambiente festivo y acogedor
+  - Decoraciones mexicanas tradicionales (papel picado, sombreros, banderas)
+  - Colores vibrantes y alegres
+  - Interior cálido y luminoso
+- **Elementos a evitar**:
+  - No incluir texto en el fondo (el texto va en el UI)
+  - No incluir botones en el fondo (los botones van en el UI)
+  - No hacer el fondo demasiado oscuro (debe ser luminoso y acogedor)
+  - No usar colores apagados o tristes
+  - No saturar demasiado el centro (debe haber espacio para el logo y botones)
 
 #### 54. **fondo-nivel.png** - Fondo Durante el Juego
 - **Tamaño**: 800x600 píxeles
@@ -970,9 +1062,228 @@ El juego utiliza un estilo pixel art retro con:
   - Efecto celebratorio
   - Sombra sutil
 
+### 🎭 Fondos de Escenarios para Game Over, Victory y Pausa
+
+#### 57. **fondo-game-over.png** - Fondo Completo para Pantalla de Game Over
+- **Tamaño**: 1920x1080 píxeles (Full HD) o 1280x720 píxeles (HD)
+  - **Recomendado**: 1920x1080 para mejor calidad en todas las pantallas
+  - **Aspecto**: 16:9 (landscape/horizontal)
+  - **Resolución mínima**: 1280x720 píxeles
+  - **Resolución máxima**: 3840x2160 píxeles (4K) - opcional para futuro
+- **Posición**: Fondo completo de la pantalla, cubre todo el viewport
+- **Fondo**: Sólido o con patrón/textura
+- **Estilo**: Pixel Art, ambiente dramático y sombrío
+- **Colores principales**:
+  - **Base principal**: Rojo oscuro (#8B0000) o Marrón muy oscuro (#3E2723)
+  - **Gradiente base**: De rojo oscuro (#8B0000) a negro (#000000) o de marrón oscuro (#3E2723) a negro
+  - **Acentos rojos**: Rojo intenso (#C62828), Rojo medio (#D32F2F), Rojo claro (#E53935)
+  - **Sombras**: Negro (#000000) con opacidad variable (70-90%)
+  - **Elementos decorativos**: Grises oscuros (#424242, #616161), Rojos apagados (#B71C1C)
+- **Atmósfera y elementos visuales**:
+  - **Iluminación**: Luz tenue, ambiente oscuro y dramático
+  - **Elementos opcionales** (pueden incluirse):
+    - Cocina apagada o en penumbra
+    - Reloj de pared mostrando tiempo agotado
+    - Ingredientes desordenados o caídos
+    - Humo sutil y apagado
+    - Sombras alargadas
+    - Ventana con luz de luna o noche
+  - **Textura**: Puede tener textura sutil de madera, ladrillo, o superficie rugosa
+  - **Patrón**: Muy sutil, no debe distraer del contenido UI
+- **Detalles técnicos**:
+  - **Formato**: PNG con fondo sólido (no transparente para fondo completo)
+  - **Estilo pixel art**: Sin anti-aliasing, colores sólidos, bordes definidos
+  - **Profundidad**: Usar sombras y gradientes para crear profundidad
+  - **Contraste**: Debe tener suficiente contraste para que el panel de UI (negro/transparente) se vea bien encima
+  - **Repetición**: No debe ser tileable, es un fondo único completo
+  - **Centrado**: El contenido más importante debe estar centrado o en el tercio superior/inferior
+- **Composición**:
+  - **Zona superior (0-30%)**: Puede tener elementos decorativos (ventana, reloj, etc.)
+  - **Zona central (30-70%)**: Área principal, más limpia para el panel de UI
+  - **Zona inferior (70-100%)**: Puede tener elementos de cocina apagada, sombras, etc.
+- **Paleta de colores completa**:
+  ```
+  Base oscura: #000000 (negro puro)
+  Rojo muy oscuro: #3E2723 (marrón oscuro) o #8B0000 (rojo oscuro)
+  Rojo medio: #C62828
+  Rojo claro: #D32F2F
+  Gris oscuro: #424242
+  Gris medio: #616161
+  Acentos: #B71C1C (rojo apagado)
+  ```
+- **Efectos visuales**:
+  - **Overlay en código**: Se aplicará un overlay negro con 70% de opacidad encima para oscurecer más
+  - **Sin animaciones**: El fondo es estático, las animaciones se hacen en código
+  - **Sombra general**: Ambiente sombrío y dramático
+- **Uso en el juego**:
+  - Se usa como `background-image` en el componente `GameOver`
+  - Se cubre con un overlay oscuro (`bg-black/70`) para mejor contraste
+  - El panel de UI se muestra encima con fondo negro semitransparente
+
+#### 58. **fondo-victoria.png** - Fondo Completo para Pantalla de Victory
+- **Tamaño**: 1920x1080 píxeles (Full HD) o 1280x720 píxeles (HD)
+  - **Recomendado**: 1920x1080 para mejor calidad en todas las pantallas
+  - **Aspecto**: 16:9 (landscape/horizontal)
+  - **Resolución mínima**: 1280x720 píxeles
+  - **Resolución máxima**: 3840x2160 píxeles (4K) - opcional para futuro
+- **Posición**: Fondo completo de la pantalla, cubre todo el viewport
+- **Fondo**: Sólido o con patrón/textura
+- **Estilo**: Pixel Art, ambiente celebratorio, alegre y luminoso
+- **Colores principales**:
+  - **Base principal**: Amarillo dorado claro (#FFF9C4) o Verde claro (#C8E6C9) o Rosa claro (#FCE4EC)
+  - **Gradiente base**: 
+    - Opción 1 (dorado): De amarillo dorado (#FFF9C4) a amarillo medio (#FFEB3B)
+    - Opción 2 (verde): De verde claro (#C8E6C9) a verde medio (#81C784)
+    - Opción 3 (rosa): De rosa claro (#FCE4EC) a rosa medio (#F8BBD0)
+  - **Acentos brillantes**: 
+    - Amarillo dorado (#FFD700), Amarillo (#FFEB3B), Amarillo claro (#FFF9C4)
+    - Verde claro (#A5D6A7), Verde (#4CAF50), Verde medio (#66BB6A)
+    - Rosa claro (#F8BBD0), Rosa (#E91E63), Rosa medio (#F48FB1)
+  - **Sombras**: Muy sutiles, grises claros (#E0E0E0) con opacidad baja (10-20%)
+  - **Elementos decorativos**: Colores vibrantes y alegres
+- **Atmósfera y elementos visuales**:
+  - **Iluminación**: Luz brillante y cálida, ambiente festivo
+  - **Elementos opcionales** (pueden incluirse):
+    - Cocina iluminada y limpia
+    - Estrellas o confeti sutil en el fondo
+    - Ingredientes organizados y brillantes
+    - Ventana con luz de día o sol
+    - Decoraciones mexicanas (banderas, sombreros, etc.) muy sutiles
+    - Efectos de luz cálida
+  - **Textura**: Puede tener textura sutil de madera clara, azulejos mexicanos, o superficie lisa y brillante
+  - **Patrón**: Muy sutil, puede tener patrones mexicanos discretos (no debe distraer)
+- **Detalles técnicos**:
+  - **Formato**: PNG con fondo sólido (no transparente para fondo completo)
+  - **Estilo pixel art**: Sin anti-aliasing, colores sólidos, bordes definidos
+  - **Profundidad**: Usar luces y sombras sutiles para crear profundidad
+  - **Contraste**: Debe tener suficiente contraste para que el panel de UI (negro/transparente) se vea bien encima
+  - **Repetición**: No debe ser tileable, es un fondo único completo
+  - **Centrado**: El contenido más importante debe estar centrado o en el tercio superior/inferior
+- **Composición**:
+  - **Zona superior (0-30%)**: Puede tener elementos decorativos (ventana con sol, estrellas, etc.)
+  - **Zona central (30-70%)**: Área principal, más limpia para el panel de UI
+  - **Zona inferior (70-100%)**: Puede tener elementos de cocina iluminada, decoraciones, etc.
+- **Paleta de colores completa**:
+  ```
+  Opción Dorada:
+  Base clara: #FFF9C4 (amarillo muy claro)
+  Amarillo dorado: #FFD700
+  Amarillo medio: #FFEB3B
+  Amarillo claro: #FFF9C4
+  Acentos: #FFC107 (amarillo naranja)
+  
+  Opción Verde:
+  Base clara: #C8E6C9 (verde muy claro)
+  Verde claro: #A5D6A7
+  Verde medio: #66BB6A
+  Verde: #4CAF50
+  Acentos: #81C784 (verde medio claro)
+  
+  Opción Rosa:
+  Base clara: #FCE4EC (rosa muy claro)
+  Rosa claro: #F8BBD0
+  Rosa medio: #F48FB1
+  Rosa: #E91E63
+  Acentos: #F06292 (rosa medio)
+  ```
+- **Efectos visuales**:
+  - **Overlay en código**: Se aplicará un overlay negro con 60% de opacidad encima para mejor contraste (más claro que Game Over)
+  - **Sin animaciones**: El fondo es estático, las animaciones se hacen en código
+  - **Brillo general**: Ambiente luminoso y celebratorio
+- **Uso en el juego**:
+  - Se usa como `background-image` en el componente `Victory`
+  - Se cubre con un overlay oscuro (`bg-black/60`) para mejor contraste (más claro que Game Over)
+  - El panel de UI se muestra encima con fondo negro semitransparente
+
+#### 59. **fondo-pausa.png** - Fondo Completo para Pantalla de Pausa
+- **Tamaño**: 1920x1080 píxeles (Full HD) o 1280x720 píxeles (HD)
+  - **Recomendado**: 1920x1080 para mejor calidad en todas las pantallas
+  - **Aspecto**: 16:9 (landscape/horizontal)
+  - **Resolución mínima**: 1280x720 píxeles
+  - **Resolución máxima**: 3840x2160 píxeles (4K) - opcional para futuro
+- **Posición**: Fondo completo de la pantalla, cubre todo el viewport
+- **Fondo**: Sólido o con patrón/textura
+- **Estilo**: Pixel Art, ambiente neutro, tranquilo y en espera
+- **Colores principales**:
+  - **Base principal**: Gris azulado medio (#546E7A) o Gris cálido medio (#757575)
+  - **Gradiente base**: 
+    - Opción 1 (gris azulado): De gris azulado claro (#78909C) a gris azulado oscuro (#455A64)
+    - Opción 2 (gris cálido): De gris medio (#9E9E9E) a gris oscuro (#616161)
+  - **Acentos neutros**: 
+    - Gris claro (#B0BEC5), Gris medio (#90A4AE), Gris oscuro (#607D8B)
+    - Azul grisáceo (#78909C), Azul grisáceo oscuro (#546E7A)
+  - **Sombras**: Grises oscuros (#37474F, #455A64) con opacidad media (40-60%)
+  - **Elementos decorativos**: Colores apagados y neutros, sin distracciones
+- **Atmósfera y elementos visuales**:
+  - **Iluminación**: Luz neutra y suave, ambiente tranquilo y en pausa
+  - **Elementos opcionales** (pueden incluirse):
+    - Cocina en estado de pausa (no apagada, pero en espera)
+    - Reloj de pared visible pero detenido o con hora visible
+    - Ingredientes en su lugar, organizados pero estáticos
+    - Ventana con luz de día suave o atardecer
+    - Efecto de "congelamiento" o "pausa" sutil (no dramático)
+    - Sombras suaves y neutras
+    - Elementos de cocina visibles pero en reposo
+  - **Textura**: Puede tener textura sutil de madera, azulejos, o superficie lisa
+  - **Patrón**: Muy sutil, casi imperceptible, no debe distraer del contenido UI
+- **Detalles técnicos**:
+  - **Formato**: PNG con fondo sólido (no transparente para fondo completo)
+  - **Estilo pixel art**: Sin anti-aliasing, colores sólidos, bordes definidos
+  - **Profundidad**: Usar sombras y gradientes sutiles para crear profundidad sin drama
+  - **Contraste**: Debe tener suficiente contraste para que el panel de UI (negro/transparente) se vea bien encima
+  - **Repetición**: No debe ser tileable, es un fondo único completo
+  - **Centrado**: El contenido más importante debe estar centrado o en el tercio superior/inferior
+- **Composición**:
+  - **Zona superior (0-30%)**: Puede tener elementos decorativos sutiles (ventana, reloj, etc.)
+  - **Zona central (30-70%)**: Área principal, más limpia para el panel de UI
+  - **Zona inferior (70-100%)**: Puede tener elementos de cocina en pausa, sombras suaves, etc.
+- **Paleta de colores completa**:
+  ```
+  Opción Gris Azulado:
+  Base clara: #78909C (gris azulado claro)
+  Gris azulado medio: #546E7A
+  Gris azulado oscuro: #455A64
+  Gris oscuro: #37474F
+  Acentos: #607D8B (gris azulado medio oscuro)
+  
+  Opción Gris Cálido:
+  Base clara: #9E9E9E (gris medio claro)
+  Gris medio: #757575
+  Gris oscuro: #616161
+  Gris muy oscuro: #424242
+  Acentos: #BDBDBD (gris claro)
+  ```
+- **Efectos visuales**:
+  - **Overlay en código**: Se aplicará un overlay negro con 50-60% de opacidad encima para mejor contraste (intermedio entre Game Over y Victory)
+  - **Sin animaciones**: El fondo es estático, las animaciones se hacen en código
+  - **Ambiente general**: Neutro, tranquilo, en espera, sin drama ni celebración
+- **Uso en el juego**:
+  - Se usa como `background-image` en el componente `Paused` (o en `GamePage` cuando el estado es `PAUSED`)
+  - Se cubre con un overlay oscuro (`bg-black/50` o `bg-black/60`) para mejor contraste
+  - El panel de UI se muestra encima con fondo negro semitransparente
+  - El fondo debe sugerir "pausa" o "espera" sin ser dramático ni celebratorio
+
+#### 60. **Notas importantes para la creación de los fondos**:
+- **Consistencia visual**: Todos los fondos (Game Over, Victory, Pausa) deben mantener el estilo pixel art del juego
+- **Tamaño de archivo**: Optimizar las imágenes para web (usar herramientas como TinyPNG)
+- **Responsive**: Los fondos se escalarán con `background-size: cover` para adaptarse a diferentes tamaños de pantalla
+- **Ruta de archivos**: 
+  - `fondo-game-over.png` → `/public/game/scenarios/fondo-game-over.png`
+  - `fondo-victoria.png` → `/public/game/scenarios/fondo-victoria.png`
+  - `fondo-pausa.png` → `/public/game/scenarios/fondo-pausa.png`
+- **Referencias visuales**: 
+  - Game Over: Cocina apagada, noche, ambiente sombrío, colores oscuros y rojos
+  - Victory: Cocina iluminada, día, ambiente festivo, colores claros y vibrantes
+  - Pausa: Cocina en espera, luz neutra, ambiente tranquilo, colores grises y neutros
+- **Elementos a evitar**:
+  - No incluir texto en el fondo (el texto va en el panel de UI)
+  - No incluir botones en el fondo (los botones van en el panel de UI)
+  - No hacer el fondo demasiado complejo que distraiga del contenido
+  - No usar colores que compitan con el panel de UI (negro/transparente)
+
 ### 📋 Recetas/Órdenes (UI Elements)
 
-#### 57. **receta-pastor.png** - Receta de Taco al Pastor
+#### 60. **receta-pastor.png** - Receta de Taco al Pastor
 - **Tamaño**: 200x150 píxeles (vertical)
 - **Posición**: Panel lateral o superior
 - **Fondo**: Blanco (#FFFFFF) con borde rosa (#E91E63)
@@ -997,7 +1308,7 @@ El juego utiliza un estilo pixel art retro con:
   - Borde destacado
   - Sombra sutil
 
-    #### 58. **receta-asada.png** - Receta de Taco de Asada
+    #### 61. **receta-asada.png** - Receta de Taco de Asada
     - **Tamaño**: 200x150 píxeles
     - **Posición**: Panel lateral o superior
     - **Fondo**: Blanco (#FFFFFF) con borde
@@ -1014,7 +1325,7 @@ El juego utiliza un estilo pixel art retro con:
         5. Salsa verde
     - Iconos de cada ingrediente
 
-#### 59. **receta-carnitas.png** - Receta de Taco de Carnitas
+#### 62. **receta-carnitas.png** - Receta de Taco de Carnitas
 - **Tamaño**: 200x150 píxeles
 - **Posición**: Panel lateral o superior
 - **Fondo**: Blanco con borde
@@ -1028,7 +1339,7 @@ El juego utiliza un estilo pixel art retro con:
     4. Cilantro
     5. Salsa roja
 
-#### 60. **receta-barbacoa.png** - Receta de Taco de Barbacoa
+#### 63. **receta-barbacoa.png** - Receta de Taco de Barbacoa
 - **Tamaño**: 200x150 píxeles
 - **Posición**: Panel lateral o superior
 - **Fondo**: Blanco con borde
@@ -1042,7 +1353,7 @@ El juego utiliza un estilo pixel art retro con:
     4. Cilantro
     5. Limón
 
-#### 61. **receta-pescado.png** - Receta de Taco de Pescado
+#### 64. **receta-pescado.png** - Receta de Taco de Pescado
 - **Tamaño**: 200x150 píxeles
 - **Posición**: Panel lateral o superior
 - **Fondo**: Blanco con borde
@@ -1056,7 +1367,7 @@ El juego utiliza un estilo pixel art retro con:
     4. Salsa especial
     5. Limón
 
-#### 62. **receta-chorizo.png** - Receta de Taco de Chorizo
+#### 65. **receta-chorizo.png** - Receta de Taco de Chorizo
 - **Tamaño**: 200x150 píxeles
 - **Posición**: Panel lateral o superior
 - **Fondo**: Blanco con borde
@@ -1072,7 +1383,7 @@ El juego utiliza un estilo pixel art retro con:
 
 ### 🎁 Power-ups y Bonificaciones (32x32 px)
 
-#### 63. **powerup-tiempo.png** - Power-up de Tiempo Extra
+#### 66. **powerup-tiempo.png** - Power-up de Tiempo Extra
 - **Tamaño**: 32x32 píxeles
 - **Posición**: Aparece aleatoriamente durante el juego
 - **Fondo**: Transparente
@@ -1091,7 +1402,7 @@ El juego utiliza un estilo pixel art retro con:
   - Efecto de "especial"
   - Se mueve o flota (en código)
 
-#### 64. **powerup-puntos.png** - Power-up de Puntos Dobles
+#### 67. **powerup-puntos.png** - Power-up de Puntos Dobles
 - **Tamaño**: 32x32 píxeles
 - **Posición**: Aparece aleatoriamente
 - **Fondo**: Transparente
@@ -1109,7 +1420,7 @@ El juego utiliza un estilo pixel art retro con:
   - Efecto de "bonificación"
   - Muy visible
 
-#### 65. **powerup-ayuda.png** - Power-up de Ayuda/Hint
+#### 68. **powerup-ayuda.png** - Power-up de Ayuda/Hint
 - **Tamaño**: 32x32 píxeles
 - **Posición**: Aparece aleatoriamente
 - **Fondo**: Transparente
@@ -1126,7 +1437,7 @@ El juego utiliza un estilo pixel art retro con:
   - Efecto de "ayuda"
   - Color llamativo
 
-#### 66. **estrella-dorada.png** - Estrella Dorada (Bonificación)
+#### 69. **estrella-dorada.png** - Estrella Dorada (Bonificación)
 - **Tamaño**: 32x32 píxeles (o múltiples tamaños)
 - **Posición**: Aparece al completar objetivos
 - **Fondo**: Transparente
